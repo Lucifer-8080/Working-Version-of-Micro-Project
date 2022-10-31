@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <div class="form">
+        <form id="Form">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Microproject Subject</label>
+              <input type="text" class="form-control" id="microprojectSub" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Sets Your Microproject Subject in the Document!</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">YOur First Group Member Name</label>
+              <input type="text" class="form-control" id="groupmemberid1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Sets Your Group Member Name in the "Name of Students" List!</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">YOur Second Group Member Name</label>
+              <input type="text" class="form-control" id="groupmemberid2" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Sets Your Group Member Name in the "Name of Students" List!</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">YOur Third Group Member Name</label>
+              <input type="text" class="form-control" id="groupmemberid3" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Sets Your Group Member Name in the "Name of Students" List!</div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="show">Show Me Document</button>
+          </form>
+          <br>
+      <iframe src="about:blank" frameborder="0" name="myFrame" id="fr" allow="" style="display: none;"></iframe>
+    </div>
+    <br>
+    <br>
+    
+    
+</body>
+<script src="file.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script>
+    const Form = document.getElementById("Form");
+    let subject = document.getElementById("microprojectSub");
+    // let enr1 = document.getElementById("enrno1");
+    // let enr2 = document.getElementById("enrno2");
+    // let enr3 = document.getElementById("enrno3");
+    let stud1 = document.getElementById("stud1");
+    let stud2 = document.getElementById("stud2");
+    let stud3 = document.getElementById("stud3");
+
+
+
+Form.addEventListener('submit', function(e){
+    e.preventDefault();
+    
+
+    const subjectVal = subject.value;
+    // const enroll1 = enr1.value; 
+    // const enroll2 = enr2.value; 
+    // const enroll3 = enr3.value;
+    const Student1 = Participant1.value; 
+    const Student2 = Participant2.value; 
+    const Student3 = Participant3.value; 
+
+        // const subjectValue = subject.value;
+        // const microSubjectValue = microSubject.value;
+        localStorage.setItem('Subject ', subjectVal);
+        // localStorage.setItem('Enrollment 1', enr1);
+        // localStorage.setItem('Enrollment 2', enr2);
+        // localStorage.setItem('Enrollment 3', enr3);
+        localStorage.setItem('Studnet 1', Student1);
+        localStorage.setItem('Studnet 2', Student2);
+        localStorage.setItem('Studnet 3', Student3);
+
+        // localStorage.setItem('Subject', subjectValue);
+        // localStorage.setItem('Micro Project Subject', microSubjectValue);
+        window.location.href = "this.html";
+})
+
+    document.getElementById("show").addEventListener('click', (ev)=>{
+        let url = 'this.html';
+        let other = window.open(url, 'myFrame');
+    })
+</script>
+</html>
+
+
+
+

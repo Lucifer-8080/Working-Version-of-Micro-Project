@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <div class="container">
+        <center><h1 style="color: skyblue;">Maharashtra State Of Board Technical Education, <br> Mumbai</h1></center>
+        <center><h3 style="color: rgb(200, 189, 145);">Shri Vishweshwar Shikshan Prasark Mandal's</h3></center>
+        <center><h2 style="color: red;">Vishweshwarayya Abhiyantriki Padvika Mahavidyalaya, <br> Almala</h2></center>
+        <br>
+        <div class="fs">
+            <center><h4 style="color: blue;"><u>Micro-Project Report On</u></h4></center>
+        <center><h4><b id="subject"></b></h4></center>
+        <center><h5 style="color: blue;"><u>Submitted By</u></h5></center>
+        <center>
+            <div class="plate">
+                <div class="enr">
+                    <p style="color: red;"><b>Enrollment No</b></p>
+                    <p><b class="color" id="enrno1">5768798</b></p>
+                    <p><b class="color" id="enrno2">5768798</b></p>
+                    <p><b class="color" id="enrno3">5768798</b></p>
+                </div>
+                <div class="nm">
+                    <p style="color: red;"><b>Name of the Students</b></p>
+                    <p class="color" id="stud1"></p>
+                    <p class="color" id="stud2"></p>
+                    <p class="color" id="stud3"></p>
+                </div>
+            </div>
+        </center>
+        <center><h4 style="color: orange;"><u>Under the Guidance of</u></h4></center>
+        <center><h4 style="color: purple;">Mr. Kazi A. S. M.</h4></center>
+        <center>
+            <img src="download (1).jpg" alt="Image">
+        </center>
+        <center><h4 style="color: orange;">Department of Computer Engineering <br> Academic Year 2022-23</h4></center>
+        </div>
+    </div>
+    <center><button id="btn" class="btn bg-dark" style="color: white;">Print</button></center>
+</body>
+<!-- JQuery Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- PrintJs Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
+<!-- JScript Link -->
+<script src="script.js"></script>
+<!-- Boostrap JScript -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="file.js"></script>
+<script>
+    // localStorage.setItem('Subject ', subjectVal);
+    //         localStorage.setItem('Enrollment 1', enroll1);
+    //         localStorage.setItem('Enrollment 2', enroll2);
+    //         localStorage.setItem('Enrollment 3', enroll3);
+    //         localStorage.setItem('Studnet 1', Student1);
+    //         localStorage.setItem('Studnet 2', Student2);
+    //         localStorage.setItem('Studnet 3', Student3);
+    
+            const subject = localStorage.getItem('Subject ');
+            // const enr1 = localStorage.getItem('Enrollment 1');
+            // const enr2 = localStorage.getItem('Enrollment 2');
+            // const enr3 = localStorage.getItem('Enrollment 3');
+            const Student1 = localStorage.getItem('Studnet 1');
+            const Student2 = localStorage.getItem('Studnet 2');
+            const Student3 = localStorage.getItem('Studnet 3');
+    
+            // const Name = localStorage.getItem('Name');
+            // const Subject = localStorage.getItem('Subject');
+            // const microProject = localStorage.getItem('Micro Project Subject');
+            document.getElementById("subject").textContent = subject;
+            // document.getElementById("enrno1").textContent = enr1;
+            // document.getElementById("enrno2").textContent = enr2;
+            // document.getElementById("enrno3").textContent = enr3;
+            document.getElementById("stud1").textContent = Student1;
+            document.getElementById("stud2").textContent = Student2;
+            document.getElementById("stud3").textContent = Student3;
+    </script>
+</html>
